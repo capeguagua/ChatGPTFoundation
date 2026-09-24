@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — ChatGPT Foundation</title>
+<meta name="description" content="ChatGPT Foundation is a South African non-profit company established in 2024, developing a foundation for future work in accessible artificial intelligence education, e-commerce and digital operations.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--color-bg)}
+a{color:var(--color-accent-700)}
+a:hover{color:var(--color-accent-800)}
+</style>
+</head>
+<body>
+<div style="min-height:100vh;display:flex;flex-direction:column;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);font-size:16px;line-height:1.6">
+<header style="position:sticky;top:0;z-index:10;background:color-mix(in srgb, var(--color-bg) 92%, transparent);backdrop-filter:blur(8px)">
+  <nav class="nav" style="max-width:1200px;margin:0 auto;padding:18px 28px;flex-wrap:wrap;row-gap:10px">
+    <a href="index.html" class="nav-brand" style="display:flex;align-items:center;gap:10px;font-size:20px">
+      <img src="assets/logo-mark.png" alt="ChatGPT Foundation logo" style="height:36px;width:auto">
+      <span>ChatGPT Foundation</span>
+    </a>
+    <div style="display:flex;gap:22px;flex-wrap:wrap">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="focus.html">Our Focus</a>
+      <a href="governance.html">Governance</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </div>
+  </nav>
+</header>
+<main style="flex:1;width:100%;max-width:1200px;margin:0 auto;padding:0 28px">
+<section style="padding:72px 0 96px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:48px;align-items:start">
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <span class="tag tag-accent" style="align-self:flex-start;font-size:13px;padding:5px 14px">Contact</span>
+      <h1 style="font-size:clamp(38px,5vw,56px);margin:0">Contact the Foundation</h1>
+      <p style="font-size:18px;margin:0">General enquiries may be directed to:</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:4px">
+        <div style="display:flex;flex-direction:column;padding:18px 24px;border-radius:24px;background:var(--color-surface)">
+          <span style="font-size:13px;color:var(--color-neutral-700)">Email</span>
+          <a href="mailto:info@chatgptfoundation.com" style="font-size:18px;font-weight:600">info@chatgptfoundation.com</a>
+        </div>
+        <div style="display:flex;flex-direction:column;padding:18px 24px;border-radius:24px;background:var(--color-surface)">
+          <span style="font-size:13px;color:var(--color-neutral-700)">Location</span>
+          <span style="font-size:18px;font-weight:600">Cape Town, South Africa</span>
+        </div>
+      </div>
+    </div>
+    <div style="border-radius:36px;background:var(--color-surface);padding:36px;box-shadow:var(--shadow-sm)">
+      <div id="enquiry-form-box">
+        <form id="enquiry-form" style="display:flex;flex-direction:column;gap:18px">
+          <h3 style="font-size:24px;margin:0">Send an enquiry</h3>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px">
+            <div class="field"><label for="f-name" style="font-size:13px">Name</label><input id="f-name" name="name" class="input" required style="background:var(--color-bg);min-height:46px;font-size:15px"></div>
+            <div class="field"><label for="f-email" style="font-size:13px">Email</label><input id="f-email" name="email" type="email" class="input" required style="background:var(--color-bg);min-height:46px;font-size:15px"></div>
+          </div>
+          <div class="field"><label for="f-org" style="font-size:13px">Organisation (optional)</label><input id="f-org" name="organisation" class="input" style="background:var(--color-bg);min-height:46px;font-size:15px"></div>
+          <div class="field"><label for="f-msg" style="font-size:13px">Message</label><textarea id="f-msg" name="message" class="input" required rows="5" style="background:var(--color-bg);border-radius:22px;padding:12px 16px;font-size:15px;min-height:140px"></textarea></div>
+          <input type="text" name="_honey" aria-hidden="true" style="display:none">
+          <div id="enquiry-error" hidden>
+            <p style="margin:0;padding:14px 20px;border-radius:20px;background:var(--color-accent-100);color:var(--color-accent-900);font-size:15px">Sorry, your message could not be sent. Please email us directly at <a href="mailto:info@chatgptfoundation.com" style="color:var(--color-accent-800);font-weight:600">info@chatgptfoundation.com</a>.</p>
+          </div>
+          <button type="submit" class="btn btn-primary" style="align-self:flex-start;font-size:16px;padding:13px 26px">Send message</button>
+        </form>
+      </div>
+      <div id="enquiry-sent" hidden>
+        <div style="display:flex;flex-direction:column;gap:14px;align-items:flex-start;padding:24px 0">
+          <span style="width:56px;height:56px;border-radius:50%;background:var(--color-accent-2)"></span>
+          <h3 style="font-size:26px;margin:0">Thank you</h3>
+          <p style="margin:0;font-size:16px;color:var(--color-neutral-800)">Your enquiry has been received. We will respond to you by email as soon as possible.</p>
+          <button type="button" class="btn btn-secondary" id="enquiry-reset" style="font-size:15px;padding:10px 20px">Send another</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer style="background:var(--color-neutral-900);color:var(--color-neutral-300);margin-top:auto">
+  <div style="max-width:1200px;margin:0 auto;padding:48px 28px;display:flex;flex-direction:column;gap:24px">
+    <div style="display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-start">
+      <div style="display:flex;align-items:center;gap:14px">
+        <span style="width:64px;height:64px;border-radius:50%;background:var(--color-neutral-100);display:grid;place-items:center;flex:none"><img src="assets/logo-mark.png" alt="ChatGPT Foundation logo" style="width:44px;height:auto"></span>
+        <span style="font-family:var(--font-heading);font-size:22px;color:var(--color-neutral-100)">ChatGPT Foundation</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;max-width:560px">
+        <p style="margin:0;font-size:14px">ChatGPT Foundation is an independent South African non-profit company.</p>
+        <a href="mailto:info@chatgptfoundation.com" style="font-size:16px;font-weight:600;color:var(--color-accent-300)">info@chatgptfoundation.com</a>
+        <span style="font-size:14px">Cape Town, South Africa</span>
+      </div>
+    </div>
+    <div style="display:flex;gap:10px 28px;flex-wrap:wrap;font-size:13px;padding-top:20px;border-top:1px solid var(--color-neutral-800)">
+      <span>© 2026 ChatGPT Foundation. All rights reserved.</span>
+      <span>Registration No. 2024/420153/08</span>
+      <a href="governance.html" style="color:var(--color-accent-300)">Privacy Notice</a>
+    </div>
+  </div>
+</footer>
+</div>
+<script>
+(function () {
+  var form = document.getElementById('enquiry-form'), box = document.getElementById('enquiry-form-box'),
+      sent = document.getElementById('enquiry-sent'), error = document.getElementById('enquiry-error'),
+      button = form.querySelector('button[type="submit"]');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var d = Object.fromEntries(new FormData(form));
+    if (d._honey) return;
+    d._subject = 'Website enquiry from ' + d.name;
+    d._template = 'table';
+    button.disabled = true; button.textContent = 'Sending…'; error.hidden = true;
+    fetch('https://formsubmit.co/ajax/info@chatgptfoundation.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(d)
+    }).then(function (r) {
+      return r.json().then(function (j) { if (!r.ok || String(j.success) !== 'true') throw new Error(j.message); });
+    }).then(function () { form.reset(); box.hidden = true; sent.hidden = false; })
+      .catch(function () { error.hidden = false; })
+      .finally(function () { button.disabled = false; button.textContent = 'Send message'; });
+  });
+  document.getElementById('enquiry-reset').addEventListener('click', function () { sent.hidden = true; box.hidden = false; });
+})();
+</script>
+</body>
+</html>
